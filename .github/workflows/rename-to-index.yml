@@ -1,0 +1,19 @@
+name: Add index.html from uploaded file
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  add-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy uploaded file to index.html
+        run: |
+          git config user.name "rajashahnawaz680-stack"
+          git config user.email "rajashahnawaz680@gmail.com"
+          cp tmp-upload/marketingx-portfolio-website.html index.html
+          rm -rf tmp-upload
+          git add -A
+          git commit -m "Update MarketingX website - light sage emerald theme with real photos"
+          git push
