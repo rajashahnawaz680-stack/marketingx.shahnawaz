@@ -355,12 +355,11 @@ a.card:hover .show-visual img{transform:scale(1.05)}
 .growth-days-head label svg{width:16px;height:16px}
 .growth-days-head span{color:#617269;font-size:.76rem;font-weight:600}
 .growth-days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:14px}
-.gday{background:#fff;border:1.5px solid #D8E6DD;border-radius:11px;padding:11px 2px 9px;text-align:center;cursor:pointer;font-family:inherit;min-height:58px;transition:.15s}
+.gday{background:#fff;border:1.5px solid #D8E6DD;border-radius:11px;padding:12px 2px;text-align:center;cursor:pointer;font-family:inherit;min-height:46px;transition:.15s}
 .gday b{display:block;font-size:.85rem;color:#10251B;line-height:1.25}
-.gday span{display:block;font-size:.83rem;color:#617269;margin-top:2px}
 .gday:hover{border-color:#00A651}
 .gday.selected{border-color:#00A651;background:#E6F3EA}
-.gday.selected b,.gday.selected span{color:#008F55}
+.gday.selected b{color:#008F55}
 .growth-datepick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
 .growth-datepick label{color:#10251B;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;margin:0}
 .growth-datepick label svg{width:16px;height:16px}
@@ -377,7 +376,7 @@ a.card:hover .show-visual img{transform:scale(1.05)}
 .growth-crumb{color:#617269;font-size:.85rem;margin-bottom:26px}
 .growth-crumb a{color:#00A651;font-weight:700}
 @media(max-width:980px){.growth-grid{grid-template-columns:1fr;gap:38px}.growth-desc{max-width:640px}}
-@media(max-width:560px){.growth{padding:32px 0 36px}.growth-card{padding:22px 18px 20px}.growth-row{grid-template-columns:1fr}.growth-days{gap:5px}.gday{padding:9px 1px 8px;min-height:52px}.gday b{font-size:.72rem}.gday span{font-size:.74rem}.growth-datepick input[type="date"]{width:190px}.growth-submit{font-size:.93rem}}
+@media(max-width:560px){.growth{padding:32px 0 36px}.growth-card{padding:22px 18px 20px}.growth-row{grid-template-columns:1fr}.growth-days{gap:5px}.gday{padding:10px 1px;min-height:40px}.gday b{font-size:.72rem}.growth-datepick input[type="date"]{width:190px}.growth-submit{font-size:.93rem}}
 </style>
 </head>
 <body>
@@ -493,7 +492,7 @@ a.card:hover .show-visual img{transform:scale(1.05)}
       </div>
       <div class="growth-field"><label for="gh-challenge">Primary Scaling Challenge</label><select id="gh-challenge" name="scalingChallenge"><option>Shopify Checkout Speed &amp; Conversion Optimization</option><option>Low Traffic &amp; SEO Visibility</option><option>Low Conversion Rate</option><option>Paid Ads Not Scaling Profitably</option><option>Store Design &amp; Trust Issues</option><option>Something Else</option></select></div>
       <div class="growth-days-head"><label><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Select Available Day (EST / GMT)</label><span>Monday – Sunday availability</span></div>
-      <div class="growth-days" role="group" aria-label="Select an available day"><button type="button" class="gday selected"><b>Mon</b><span>20</span></button><button type="button" class="gday"><b>Tue</b><span>21</span></button><button type="button" class="gday"><b>Wed</b><span>22</span></button><button type="button" class="gday"><b>Thu</b><span>23</span></button><button type="button" class="gday"><b>Fri</b><span>24</span></button><button type="button" class="gday"><b>Sat</b><span>25</span></button><button type="button" class="gday"><b>Sun</b><span>26</span></button></div>
+      <div class="growth-days" role="group" aria-label="Select an available day"><button type="button" class="gday selected"><b>Mon</b></button><button type="button" class="gday"><b>Tue</b></button><button type="button" class="gday"><b>Wed</b></button><button type="button" class="gday"><b>Thu</b></button><button type="button" class="gday"><b>Fri</b></button><button type="button" class="gday"><b>Sat</b></button><button type="button" class="gday"><b>Sun</b></button></div>
       <div class="growth-datepick"><label for="gh-date"><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Or pick any date</label><input type="date" id="gh-date" class="gdate-input" aria-label="Pick any date from the calendar"><span class="gdate-chosen" hidden></span></div>
       <input type="hidden" name="preferredDay" value="Monday">
       <div class="growth-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 2.8V11c0 4.6-3 7.7-7 9.2C8 18.7 5 15.6 5 11V5.8L12 3z"/><path d="M9 11.6l2.1 2.1 3.9-4"/></svg><span>Your URL &amp; data remains strictly private. We do not share lead information.</span></div>
@@ -762,7 +761,7 @@ a.card:hover .show-visual img{transform:scale(1.05)}
       </div>
       <div class="growth-field"><label for="ga-challenge">Primary Scaling Challenge</label><select id="ga-challenge" name="scalingChallenge"><option>Shopify Checkout Speed &amp; Conversion Optimization</option><option>Low Traffic &amp; SEO Visibility</option><option>Low Conversion Rate</option><option>Paid Ads Not Scaling Profitably</option><option>Store Design &amp; Trust Issues</option><option>Something Else</option></select></div>
       <div class="growth-days-head"><label><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Select Available Day (EST / GMT)</label><span>Monday – Sunday availability</span></div>
-      <div class="growth-days" role="group" aria-label="Select an available day"><button type="button" class="gday selected"><b>Mon</b><span>20</span></button><button type="button" class="gday"><b>Tue</b><span>21</span></button><button type="button" class="gday"><b>Wed</b><span>22</span></button><button type="button" class="gday"><b>Thu</b><span>23</span></button><button type="button" class="gday"><b>Fri</b><span>24</span></button><button type="button" class="gday"><b>Sat</b><span>25</span></button><button type="button" class="gday"><b>Sun</b><span>26</span></button></div>
+      <div class="growth-days" role="group" aria-label="Select an available day"><button type="button" class="gday selected"><b>Mon</b></button><button type="button" class="gday"><b>Tue</b></button><button type="button" class="gday"><b>Wed</b></button><button type="button" class="gday"><b>Thu</b></button><button type="button" class="gday"><b>Fri</b></button><button type="button" class="gday"><b>Sat</b></button><button type="button" class="gday"><b>Sun</b></button></div>
       <div class="growth-datepick"><label for="ga-date"><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Or pick any date</label><input type="date" id="ga-date" class="gdate-input" aria-label="Pick any date from the calendar"><span class="gdate-chosen" hidden></span></div>
       <input type="hidden" name="preferredDay" value="Monday">
       <div class="growth-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="#00A651" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 2.8V11c0 4.6-3 7.7-7 9.2C8 18.7 5 15.6 5 11V5.8L12 3z"/><path d="M9 11.6l2.1 2.1 3.9-4"/></svg><span>Your URL &amp; data remains strictly private. We do not share lead information.</span></div>
@@ -985,7 +984,6 @@ document.querySelectorAll('form[data-form]').forEach(function(form){
    var d=new Date(monday.getFullYear(),monday.getMonth(),monday.getDate()+i);
    var label=full[i]+' '+d.getDate()+' '+months[d.getMonth()];
    btn.querySelector('b').textContent=names[i];
-   btn.querySelector('span').textContent=d.getDate();
    btn.setAttribute('aria-label','Select '+label);
    btn.setAttribute('data-day',label);
    if(i===0&&hidden)hidden.value=label;
