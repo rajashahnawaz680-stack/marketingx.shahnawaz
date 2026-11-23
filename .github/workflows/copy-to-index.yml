@@ -1,0 +1,21 @@
+name: Copy site to index
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'temp/marketingx-portfolio-website.html'
+permissions:
+  contents: write
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy fresh export to index.html
+        run: |
+          cp temp/marketingx-portfolio-website.html index.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Update index.html from temp/marketingx-portfolio-website.html"
+          git push
