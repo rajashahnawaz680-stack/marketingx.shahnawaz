@@ -1,0 +1,25 @@
+name: Copy temp export to index
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  copy-to-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy temp file to index.html
+        run: |
+          test -f temp/marketingx-portfolio-website.html
+          cp temp/marketingx-portfolio-website.html index.html
+          ls -l index.html temp/marketingx-portfolio-website.html
+      - name: Commit index.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Update index.html from temp export"
+          git push
